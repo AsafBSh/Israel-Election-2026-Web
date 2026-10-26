@@ -1,0 +1,317 @@
+[
+ {
+  "key": "logo_likud",
+  "kind": "logo",
+  "file": "logo_likud.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Likud_Logo.svg",
+  "author": "עיצוב מקורי: גדעון שגיא, עיצוב נוסף: ראובן אדלר מתוך אתר הארץ",
+  "license": "Public domain",
+  "width": 320
+ },
+ {
+  "key": "logo_rz",
+  "kind": "logo",
+  "file": "logo_rz.png",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Religious_Zionist_Party_logo_2026.png",
+  "author": "Religious Zionist Party",
+  "license": "Public domain",
+  "width": 600
+ },
+ {
+  "key": "logo_otzma",
+  "kind": "logo",
+  "file": "logo_otzma.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Otzma_Yehudit_2021_logo.svg",
+  "author": "Unknown",
+  "license": "Public domain",
+  "width": 692
+ },
+ {
+  "key": "logo_shas",
+  "kind": "logo",
+  "file": "logo_shas.png",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Shas_logo.png",
+  "author": "Shas",
+  "license": "Public domain",
+  "width": 600
+ },
+ {
+  "key": "logo_utj",
+  "kind": "logo",
+  "file": "logo_utj.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:United_Torah_Judaism_Logo_2019.svg",
+  "author": "United Torah Judaism",
+  "license": "Public domain",
+  "width": 216
+ },
+ {
+  "key": "logo_yashar",
+  "kind": "logo",
+  "file": "logo_yashar.png",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yashar_party_logo.png",
+  "author": "ישר! עם איזנקוט",
+  "license": "Public domain",
+  "width": 600
+ },
+ {
+  "key": "logo_beyachad",
+  "kind": "logo",
+  "file": "logo_beyachad.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Together-logo-29April.svg",
+  "author": "רשימת ביחד",
+  "license": "Public domain",
+  "width": 671
+ },
+ {
+  "key": "logo_yb",
+  "kind": "logo",
+  "file": "logo_yb.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Israel-beytenu-logo.svg",
+  "author": "Юкатан",
+  "license": "Public domain",
+  "width": 1920
+ },
+ {
+  "key": "logo_dem",
+  "kind": "logo",
+  "file": "logo_dem.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:The_Democrats_(Israel)_logo_2026.svg",
+  "author": "The Democrats",
+  "license": "Public domain",
+  "width": 130
+ },
+ {
+  "key": "logo_raam",
+  "kind": "logo",
+  "file": "logo_raam.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Raam_logo_2021.svg",
+  "author": "United Arab List",
+  "license": "Public domain",
+  "width": 516
+ },
+ {
+  "key": "logo_joint",
+  "kind": "logo",
+  "file": "logo_joint.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Logo_of_the_Joint_List_(Israel)_2026_(vector).svg",
+  "author": "The Joint List",
+  "license": "Public domain",
+  "width": 512
+ },
+ {
+  "key": "logo_miluim",
+  "kind": "logo",
+  "file": "logo_miluim.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Logo_of_The_Reservists.svg",
+  "author": "The Reservists party",
+  "license": "Public domain",
+  "width": 1034
+ },
+ {
+  "key": "logo_amcha",
+  "kind": "logo",
+  "file": "logo_amcha.svg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Amcha_Yisrael.svg",
+  "author": "עַמְךָ יִשְׂרָאֵל",
+  "license": "Public domain",
+  "width": 946
+ },
+ {
+  "key": "photo_netanyahu",
+  "kind": "photo",
+  "file": "photo_netanyahu.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Benjamin_Netanyahu,_February_2023.jpg",
+  "author": "Avi Ohayon",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_smotrich",
+  "kind": "photo",
+  "file": "photo_smotrich.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Bezalel_Smotrich.jpg",
+  "author": "Avi Ohayon",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_feiglin",
+  "kind": "photo",
+  "file": "photo_feiglin.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Moshe_Feiglin.jpg",
+  "author": "נווהשאנן at Hebrew Wikipedia",
+  "license": "Public domain",
+  "width": 589
+ },
+ {
+  "key": "photo_bengvir",
+  "kind": "photo",
+  "file": "photo_bengvir.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Itamar_Ben_Gvir_(portrait).jpg",
+  "author": "דוד דנברג",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_deri",
+  "kind": "photo",
+  "file": "photo_deri.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%D7%90%D7%A8%D7%99%D7%94_%D7%93%D7%A8%D7%A2%D7%99_2.jpg",
+  "author": "רווח הפקות ©",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_asher",
+  "kind": "photo",
+  "file": "photo_asher.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Jacob_Asher_(E32J026298).jpg",
+  "author": "Nati Shohat",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_gafni",
+  "kind": "photo",
+  "file": "photo_gafni.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Moshe_Gafni_(E32J1400).jpg",
+  "author": "Nati Shohat",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_eisenkot",
+  "kind": "photo",
+  "file": "photo_eisenkot.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Gadi_Eisenkot_2_(cropped_-_WD).jpg",
+  "author": "יהב טרודלר (Yahav Trudler - Yahav Studio‬‏)",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_yoramcohen",
+  "kind": "photo",
+  "file": "photo_yoramcohen.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yoram-Cohen-0002.jpg",
+  "author": "עמוס בן גרשון, לשכת העיתונות הממשלתית via e Spokesperson unit of the President of Israel - דוברות בית הנשיא",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_kahana",
+  "kind": "photo",
+  "file": "photo_kahana.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:MatanK-DSC_0053a.jpg",
+  "author": "Arielinson",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_bennett",
+  "kind": "photo",
+  "file": "photo_bennett.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Naftali_Bennett_official_portrait_(cropped).jpg",
+  "author": "Avi Ohayon",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_lapid",
+  "kind": "photo",
+  "file": "photo_lapid.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yair_Lapid_(D1237-011).jpg",
+  "author": "Avi Ohayon",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_liberman",
+  "kind": "photo",
+  "file": "photo_liberman.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Avigdor_Lieberman_2017.jpg",
+  "author": "Jim Mattis",
+  "license": "Public domain",
+  "width": 600
+ },
+ {
+  "key": "photo_golan",
+  "kind": "photo",
+  "file": "photo_golan.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yair_Golan_(SHL_9404).jpg",
+  "author": "Shlomi Amsalem",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_lazimi",
+  "kind": "photo",
+  "file": "photo_lazimi.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Naama_lazimi.jpg",
+  "author": "Mayan Tarabish (מעיין טרביש)",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_kariv",
+  "kind": "photo",
+  "file": "photo_kariv.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:GiladKariv15.jpg",
+  "author": "גלעד קריב",
+  "license": "Public domain",
+  "width": 600
+ },
+ {
+  "key": "photo_abbas",
+  "kind": "photo",
+  "file": "photo_abbas.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Mansour_Abbas,_April_3_2023_(cropped).jpg",
+  "author": "U.S. Embassy Jerusalem",
+  "license": "CC BY 2.0",
+  "width": 600
+ },
+ {
+  "key": "photo_segalovitz",
+  "kind": "photo",
+  "file": "photo_segalovitz.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yoav_Segalovic_-_Israel_Police.jpg",
+  "author": "Israel Police",
+  "license": "CC BY-SA 3.0",
+  "width": 600
+ },
+ {
+  "key": "photo_tibi",
+  "kind": "photo",
+  "file": "photo_tibi.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Ahmad_Tibi_2021_(cropped).png",
+  "author": "אמיר דיב - Amir Deeb",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_jabareen",
+  "kind": "photo",
+  "file": "photo_jabareen.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yousef_Jabareen_2021.png",
+  "author": "אמיר דיב - Amir Deeb",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_hendel",
+  "kind": "photo",
+  "file": "photo_hendel.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Yoaz_Hendel_(ISH_6916).jpg",
+  "author": "Itzhak Harari",
+  "license": "CC BY-SA 4.0",
+  "width": 600
+ },
+ {
+  "key": "photo_winter",
+  "kind": "photo",
+  "file": "photo_winter.jpg",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Ofer_Winter_(49676496197)_(cropped).jpg",
+  "author": "U.S. Secretary of Defense",
+  "license": "CC BY 2.0",
+  "width": 588
+ }
+]
