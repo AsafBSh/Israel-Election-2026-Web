@@ -2181,23 +2181,38 @@ function applyLang() {
   document.querySelectorAll(".langs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === LANG)));
   document.querySelectorAll(".chip[data-bloc] .bn").forEach((b) => { b.textContent = BN(b.closest(".chip").dataset.bloc); });
   document.querySelectorAll(".tab").forEach((b) => { b.textContent = TL(b.dataset.topic); });
-  document.querySelector("#blocStrip").innerHTML = ""; strip();
+  document.querySelector("#blocStrip").innerHTML = ""; strip(); setTimeout(countHero, 50);
   document.querySelector("#grid").innerHTML = ""; buildCards();
   render(); renderCredits();
 }
 document.querySelectorAll(".langs button").forEach((b) => b.addEventListener("click", () => { LANG = b.dataset.lang; try { localStorage.setItem("mapat-lang", LANG); } catch (_) {} applyLang(); }));
 if (LANG !== "he") applyLang(); else { render(); renderCredits(); }
 document.querySelectorAll('nav.top a[href^="#"]').forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); const t = document.querySelector(a.getAttribute("href")); if (t) { t.scrollIntoView({ block: "start" }); try { history.replaceState(null, "", a.getAttribute("href")); } catch (_) {} } }));
-(function motion() {
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const count = (el) => { const end = parseFloat(el.dataset.count); if (reduce) { el.textContent = end; return; } const t0 = performance.now(); const dec = String(end).includes(".") ? 1 : 0; const step = (t) => { const k = Math.min(1, (t - t0) / 1400); const e = 1 - Math.pow(1 - k, 3); el.textContent = (end * e).toFixed(dec); if (k < 1) requestAnimationFrame(step); else el.textContent = String(end); }; requestAnimationFrame(step); };
-  const targets = document.querySelectorAll(".grid, .trust-chart, .trust-cards, .scale-wrap, .bloc-strip, .facts");
-  if (!("IntersectionObserver" in window) || reduce) { targets.forEach((t) => t.classList.add("inview")); document.querySelectorAll("[data-count]").forEach((c) => (c.textContent = c.dataset.count)); return; }
-  const io = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) return; e.target.classList.add("inview"); e.target.querySelectorAll("[data-count]").forEach(count); io.unobserve(e.target); }), { threshold: .2 });
-  targets.forEach((t) => io.observe(t));
-  const mo = new MutationObserver(() => document.querySelectorAll(".tcard[open]").forEach((d) => d.classList.add("inview")));
-  mo.observe(document.body, { attributes: true, subtree: true, attributeFilter: ["open"] });
-})();
+const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function countUp(el) {
+  const end = parseFloat(el.dataset.count); if (isNaN(end)) return;
+  if (el.dataset.counted === "1") { el.textContent = String(end); return; }
+  el.dataset.counted = "1";
+  if (REDUCE || document.hidden) { el.textContent = String(end); return; }
+  setTimeout(() => { el.textContent = String(end); }, 1600);
+  const t0 = performance.now(); const dec = String(end).includes(".") ? 1 : 0;
+  const step = (t) => { const k = Math.min(1, (t - t0) / 1400); const e = 1 - Math.pow(1 - k, 3); el.textContent = (end * e).toFixed(dec); if (k < 1) requestAnimationFrame(step); else el.textContent = String(end); };
+  requestAnimationFrame(step);
+}
+function revealCheck() {
+  const vh = window.innerHeight || document.documentElement.clientHeight || 900;
+  document.querySelectorAll(".grid, .trust-chart, .trust-cards, .scale-wrap, .bloc-strip, .hero .facts").forEach((t) => {
+    if (t.classList.contains("inview")) return;
+    const r = t.getBoundingClientRect();
+    if (vh === 0 || (r.top < vh * 0.92 && r.bottom > 0)) { t.classList.add("inview"); t.querySelectorAll("[data-count]").forEach(countUp); }
+  });
+}
+function countHero() { document.querySelectorAll(".bloc-strip [data-count], .hero .facts [data-count]").forEach(countUp); document.querySelectorAll(".bloc-strip, .hero .facts").forEach((t) => t.classList.add("inview")); }
+let revealTick = false;
+const onScroll = () => { if (revealTick) return; revealTick = true; requestAnimationFrame(() => { revealTick = false; revealCheck(); }); };
+window.addEventListener("scroll", onScroll, { passive: true }); window.addEventListener("resize", onScroll);
+revealCheck(); countHero(); setTimeout(revealCheck, 600); setTimeout(countHero, 300);
+new MutationObserver(() => document.querySelectorAll(".tcard[open]").forEach((d) => d.classList.add("inview"))).observe(document.body, { attributes: true, subtree: true, attributeFilter: ["open"] });
 if (location.hash && (location.hash.startsWith("#tc-") || location.hash.startsWith("#cc-"))) { const d = document.querySelector(location.hash); if (d) d.open = true; }
 </script>
 </body></html>
