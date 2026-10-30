@@ -89,6 +89,12 @@ body::before { background: var(--black); }
 .bloc-strip > div { background: var(--c); color: #fff; padding: 14px 14px 12px; display: grid; gap: 2px; min-width: 0; border-radius: 10px; animation: rise .6s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i, 0) * 70ms + .2s); }
 .bloc-strip .n { font-family: var(--letters); font-size: clamp(2.4rem, 4vw, 3.6rem); line-height: 1; }
 .bloc-strip .l { font-size: 1.05rem; font-weight: 500; }
+.seatbar { display: flex; margin-top: 18px; height: 54px; border-radius: 8px; overflow: hidden; gap: 2px; }
+.seatbar > span { background: var(--c); min-width: 0; display: grid; align-content: center; justify-items: center; color: #fff; font-size: .8rem; line-height: 1.1; cursor: pointer; transition: filter .2s; animation: rise .6s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i, 0) * 40ms + .5s); }
+.seatbar > span:hover { filter: brightness(1.15); }
+.seatbar b { font-family: var(--letters); font-size: 1.15rem; }
+.seatbar small { font-size: .72rem; opacity: .9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+@media (max-width: 640px) { .seatbar small { display: none; } .seatbar { height: 40px; } }
 .bloc-strip .l2 { font-size: .9rem; opacity: .9; }
 @media (max-width: 640px) { .bloc-strip { grid-template-columns: 1fr; } }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 32px; font-size: 1rem; color: var(--muted); }
@@ -299,14 +305,17 @@ html[dir="ltr"] .bar i { transform: translateX(-50%); }
 </div></nav>
 
 <header class="hero gutter" id="top"><div class="wrap">
-  <p class="date" data-t="date">בחירות לכנסת ה-26, יום שלישי 27 באוקטובר 2026</p>
+  <p class="date" data-t="date">בחירות לכנסת ה-26, 27 באוקטובר 2026. תוצאות הספירה הסופית של ועדת הבחירות המרכזית, 30.10.2026, בכפוף לבדיקה; מוגשות לנשיא ב-4.11.</p>
   <h1><span class="w" data-t="h1a">שלושה‑עשר פתקים.</span> <span class="w" data-t="h1b">מה כתוב מאחוריהם.</span></h1>
-  <p class="lede" data-t="lede">סקירה של אחת-עשרה הרשימות הדומיננטיות ושתיים שנעות סביב אחוז החסימה: מה כל אחת אומרת על ביטחון, כלכלה, מדיניות חוץ, הסוגיה הפלסטינית והערבית וחינוך. מה מיוחד לה. איפה היא עומדת על ציר ביטחוני, ציר כלכלי וציר דת ומדינה. כמה אפשר לסמוך על ההבטחות שלה, לפי מה שעשתה בעבר ולפי מי שיושב ברשימה. ומה מתועד עליה בשחיתות, בכספי ציבור ובחובות, עם נקודות הביקורת שצריך לשקול לפני שמגבשים דעה.</p>
+  <p class="lede" data-t="lede">סקירה של אחת-עשרה הרשימות שנכנסו לכנסת ה-26 ושתיים שלא עברו את אחוז החסימה: מה כל אחת אומרת על ביטחון, כלכלה, מדיניות חוץ, הסוגיה הפלסטינית והערבית וחינוך. מה מיוחד לה. איפה היא עומדת על ציר ביטחוני, ציר כלכלי וציר דת ומדינה. כמה אפשר לסמוך על ההבטחות שלה, לפי מה שעשתה בעבר ולפי מי שיושב ברשימה. ומה מתועד עליה בשחיתות, בכספי ציבור ובחובות, עם נקודות הביקורת שצריך לשקול לפני שמגבשים דעה.</p>
   <div class="bloc-strip" id="blocStrip"></div>
+  <div class="seatbar" id="seatBar" role="img" aria-label="חלוקת 120 המנדטים"></div>
   <div class="facts">
     <span><span data-t="threshold_lbl">אחוז חסימה</span> <b class="num">3.25%</b></span>
     <span><span data-t="majority_lbl">רוב לקואליציה</span> <b class="num">61</b></span>
-    <span><span data-t="polls_lbl">ממוצע ארבעת הסקרים האחרונים: אופוזיציה ציונית</span> <b class="num" data-count="54">0</b>, <span data-t="polls_mid">גוש נתניהו</span> <b class="num" data-count="49.5">0</b>, <span data-t="polls_arab">רשימות ערביות</span> <b class="num" data-count="14.5">0</b></span>
+    <span><span data-t="polls_lbl">תוצאות: אופוזיציה ציונית</span> <b class="num" data-count="48">0</b>, <span data-t="polls_mid">גוש נתניהו</span> <b class="num" data-count="53">0</b>, <span data-t="polls_arab">רשימות ערביות</span> <b class="num" data-count="19">0</b></span>
+    <span><span data-t="turnout_lbl">אחוז הצבעה</span> <b class="num">77.9%</b></span>
+    <span><span data-t="valid_lbl">קולות כשרים</span> <b class="num">5,690,778</b>, <span data-t="thr_votes_lbl">אחוז החסימה בקולות</span> <b class="num">184,947</b></span>
   </div>
   <p class="muted lang-note" data-t="lang_note" hidden></p>
   <div hidden>
@@ -403,6 +412,7 @@ html[dir="ltr"] .bar i { transform: translateX(-50%); }
     <p data-t="note_rank"><b>על הדירוגים.</b> המיקום על הצירים וציוני האמינות והמקצועיות הם פרשנות עריכתית ואינם מופיעים במצעים. למפלגות החרדיות והערביות אין לעיתים תפיסה ביטחונית או כלכלית כוללת, והמיקום משקף הצבעות ותנאים קואליציוניים בפועל. בפרק האמינות נבחרו אירועים מתועדים ובולטים; הוא אינו רשימה ממצה של כל הבטחה.</p>
     <p data-t="note_blocs"><b>על הגושים.</b> שלושה גושים בלבד: ציונים, חרדים וערבים. "ימין", "מרכז" ו"שמאל" אינם גושים בעמוד אלא מיקום על הציר הביטחוני במצפן, כי רוב המפלגות שמכנות את עצמן "מרכז" ממוקמות בימין הביטחוני לפי המצע וההצבעות. <b>על הרשימות סביב אחוז החסימה.</b> המילואימניקים-הכלכלית ועמך ישראל מופיעות בפתק מקווקו. בחלק מהסקרים הן עוברות ובחלק לא, ולכן אינן נכללות בסכומי הגושים. <b>על מדדי השחיתות וכספי הציבור.</b> חלק מהעובדות (הרשעות ישנות, הסדרי טיעון, פרשות שנסגרו) נכתבו מידע כללי ולא אומתו מחדש מול מסמכי בית משפט בעת הכתיבה; תאריכים וסכומים עשויים להיות מדויקים פחות. <b>תמונת זליכה</b> חסרה כי לא נמצא תצלום ברישיון חופשי.</p>
     <ol class="sources">
+      <li><a href="https://www.inn.co.il/news/709660" target="_blank" rel="noopener">ועדת הבחירות המרכזית (באמצעות ערוץ 7, 30.10.2026): תוצאות האמת הסופיות וחלוקת המנדטים לכנסת ה-26; 5,690,778 קולות כשרים, אחוז הצבעה 77.9%</a></li>
       <li><a href="https://polimeter.co.il/compare" target="_blank" rel="noopener">פולימטר: השוואת עמדות המפלגות 2026</a></li>
       <li><a href="https://www.ynet.co.il/news/elections2026/article/yokra14910407" target="_blank" rel="noopener">ynet: פינוי או בינוי, תוכנית כל מפלגה ליהודה ושומרון</a></li>
       <li><a href="https://www.ynet.co.il/news/elections2026/article/yokra14920395" target="_blank" rel="noopener">ynet: תוכניות המפלגות בנוגע לאופייה של המדינה</a></li>
@@ -881,7 +891,7 @@ amcha: {
 
 const NEW_PARTIES = [
 {
-  id: "miluim", letters: "כ", name: "המילואימניקים–הכלכלית", leader: "יועז הנדל וירון זליכה", bloc: "zion", seats: "3–4", threshold: true, sec: 6.5, eco: 8, rel: -6,
+  id: "miluim", letters: "כ", name: "המילואימניקים–הכלכלית", leader: "יועז הנדל וירון זליכה", bloc: "zion", seats: "3–4", threshold: true, result: 0, pct: "2.72%", sec: 6.5, eco: 8, rel: -6,
   one: "חוק גיוס לפני הקמת ממשלה, ממשלה ציונית בלבד, מע\"מ 12%, חוקה ציונית.",
   why: "ביטחוני 6.5+: ריבונות \"דרך מעשים\", לא לפינוי, חטיבת סיכול בשב\"כ לפשיעה; ממלכתי אך ניצי. כלכלי 8+: הקו הליברלי הקיצוני ביותר: הורדת מע\"מ ל-12%, ביטול מכסים, איסור יבואנים בלעדיים.",
   rwhy: "דת ומדינה 6-: ליברלי במצע; הנדל עצמו שומר מסורת, ו\"ראשי ערים יחליטו\" במקום חוק ארצי.",
@@ -910,7 +920,7 @@ const NEW_PARTIES = [
   },
 },
 {
-  id: "amcha", letters: "ך", name: "עמך ישראל", leader: "עופר וינטר", bloc: "zion", seats: "0–4", threshold: true, sec: 8.5, eco: 5, rel: 2,
+  id: "amcha", letters: "ך", name: "עמך ישראל", leader: "עופר וינטר", bloc: "zion", seats: "0–4", threshold: true, result: 0, pct: "1.68%", sec: 8.5, eco: 5, rel: 2,
   one: "הגירה מרצון מעזה, לא למדינה פלסטינית, חוק גיוס לפני ממשלה, רשימה ישראלית חילונית-ימנית.",
   why: "ביטחוני 8.5+: הגירה מרצון, ריבונות בכל הארץ, שלילת פינוי כ\"סכנה קיומית\". כלכלי 5+: פירוק ריכוזיות וביטול חסמי יבוא, ללא פירוט.",
   rwhy: "דת ומדינה 2+: מסורתי-מתון. מעדיף הלכה אבל לא כופה אותה; בסיס קצר וסתירות בין הצהרות.",
@@ -1089,10 +1099,10 @@ en: {
   dir: "ltr",
   ui: {
     brand: "Party Map 2026", nav_slips: "Ballots", nav_topics: "By topic", nav_compass: "Compass", nav_trust: "Credibility", nav_behave: "Words vs. deeds", nav_corr: "Corruption & public money", nav_sources: "Sources",
-    date: "Election for the 26th Knesset, Tuesday 27 October 2026",
+    date: "Election for the 26th Knesset, 27 October 2026. Final count by the Central Elections Committee, 30.10.2026, subject to verification; submitted to the President on 4.11.",
     h1a: "Thirteen ballots.", h1b: "What is written behind them.",
-    lede: "A review of the eleven dominant lists and two hovering at the threshold: what each says on security, the economy, foreign policy, the Palestinian and Arab question and education. What makes it distinct. Where it sits on a security axis, an economic axis and a religion-and-state axis. How far its promises can be trusted, judged by its record and by who is on the list. And what is documented on corruption, public money and debt, with the critical points to weigh before forming a view.",
-    threshold_lbl: "Electoral threshold", majority_lbl: "Coalition majority", polls_lbl: "Average of the last four polls: Zionist opposition", polls_mid: "Netanyahu bloc", polls_arab: "Arab lists",
+    lede: "A review of the eleven lists that entered the 26th Knesset and two that fell below the threshold: what each says on security, the economy, foreign policy, the Palestinian and Arab question and education. What makes it distinct. Where it sits on a security axis, an economic axis and a religion-and-state axis. How far its promises can be trusted, judged by its record and by who is on the list. And what is documented on corruption, public money and debt, with the critical points to weigh before forming a view.",
+    threshold_lbl: "Electoral threshold", majority_lbl: "Coalition majority", polls_lbl: "Results: Zionist opposition", polls_mid: "Netanyahu bloc", polls_arab: "Arab lists",
     ch1_h: "Thirteen ballots, three blocs", ch1_p: "Each ballot carries the letters approved by the Central Elections Committee. Click a ballot to open its full review; hover to see the scores on the back. Three blocs: Zionist, Haredi and Arab. Within the Zionist bloc the ballot is darker the further right the party sits on the security axis. The filter applies to the whole page.",
     ch2_h: "One question, thirteen answers", ch2_p: "Pick a topic to see every party's position side by side. Summarised from platforms, statements and the parties' answers to media questionnaires.",
     ch3_h: "Security axis, economic axis, religion-and-state axis", ch3_p: "Three axes, two shown at a time; pick the pair above. Security: from settlement and withdrawal to decisive force and sovereignty. Economic: from a welfare state to a free market. Religion and state: from separation of religion and state, civil marriage and Shabbat public transport on the liberal side (-10) to the halachic status quo, exemption for Torah students and Rabbinate-only marriage on the conservative side (+10). Values are an editorial estimate on a scale from -10 to +10 based on each party's own platform, statements and votes. The religion-and-state axis draws on the Knesset votes on Shabbat public transport (19.11.2025) and civil marriage (7.6.2023), the Basic Law: Torah Study (13.7.2026), the platforms and the ynet and N12 questionnaires. Sitting in a coalition does not move a party on the axis: sitting with the right does not mean believing everything the right does. A party with no declared security doctrine is shown as a hollow circle. The blocs are three, Zionist, Haredi and Arab, because right, centre and left are decided here by the compass itself and not by the name a party chose. Hover or click a point for the reasoning.",
@@ -1101,11 +1111,11 @@ en: {
     bh_h: "What the party says it is, and what it does", bh_p: "Every party defines itself: right, left, liberal, social, statesmanlike. Here the self-definition is checked against the record: dated Knesset votes, cabinet decisions, answers to economic questionnaires and dated statements by party leaders. For each axis: what was said, what was done, and whether it matches, partly matches or clashes. A party with no votes is marked \"no record\". This is also the basis for the compass revisions: Likud and Religious Zionism moved down the economic axis because their conduct in government did not match the free-market declaration.",
     corr_h: "Corruption, public money and debt", corr_p: "Two further indices on a 0 to 5 scale where a higher score means higher exposure. Corruption counts indictments, convictions and State Comptroller findings against the list's elected officials and leaders, including in the past. Public money and debt measures coalition funds the list demanded and received, ministries created for it, party debts to the state and Comptroller findings on its financing. Each list comes with critical points: why the figure may mislead and what to ask before concluding. Veteran governing parties will look worse here than new or opposition parties, not necessarily because they are more corrupt but because they had more opportunities.",
     src_h: "Sources and notes",
-    all: "All", click_open: "Click to open, hover to flip", seats_polls: "seats in polls", near_threshold: "around the threshold,",
+    all: "All", click_open: "Click to open, hover to flip", seats_polls: "seats in polls", near_threshold: "around the threshold,", seats_won: "seats", polls_were: "polls {n}", not_passed: "below the threshold,", turnout_lbl: "Turnout", valid_lbl: "Valid votes", thr_votes_lbl: "threshold in votes",
     cred_lbl: "Credibility (promises vs. deeds)", prof_lbl: "Professionalism", prof_formula: "rating {b}, coverage {c}", corr_lbl: "Corruption", waste_lbl: "Public money & debt", sec_lbl: "Security axis", eco_lbl: "Economic axis", more: "Full review",
     chart_party: "Party (sorted by total score)", chart_cred: "Credibility: promises vs. deeds", chart_prof: "Professionalism: average of editorial rating and weighted coverage", chart_note: "A faded credibility score means low confidence: a short record. Click a row for details.",
     corr_party: "List (sorted from highest exposure)", corr_c: "Corruption: indictments, convictions, Comptroller findings", corr_w: "Public money & debt: coalition funds, ministries, debts to the state", corr_note: "Here a high score means higher exposure, unlike the credibility chapter. Click a row for details and the critical points.",
-    legend_size: "Circle size by average seats in polls", legend_hollow: "Hollow circle: no declared security doctrine; placed by the party's own statements and votes", legend_dashed: "Dashed: around the threshold",
+    legend_size: "Circle size by seats won", legend_hollow: "Hollow circle: no declared security doctrine; placed by the party's own statements and votes", legend_dashed: "Dashed: did not pass the threshold",
     ax_right: "Security right: decisive force, sovereignty", ax_left: "Security left: settlement, separation", ax_top: "Top: free market, competition", ax_bottom: "Bottom: welfare state, intervention",
     tbl_party: "Party", tbl_sec: "Security, left to right", tbl_eco: "Economic, welfare to market",
     rel_lbl: "Religion & state axis", rel_hint: "-10 liberal, +10 conservative", tbl_rel: "Religion & state, liberal to conservative", ax_rel_hi: "Conservative: halachic status quo, exemption for Torah students", ax_rel_lo: "Liberal: separation of religion and state, civil marriage", ax_eco_hi: "Free market, competition", ax_eco_lo: "Welfare state, intervention", view_lbl: "Choose axes", view_se: "Security × economy", view_sr: "Security × religion & state", view_er: "Economy × religion & state", sec_hint: "-10 settlement, +10 decisive force", eco_hint: "-10 welfare, +10 market",
@@ -1309,10 +1319,10 @@ ru: {
   dir: "ltr",
   ui: {
     brand: "Карта партий 2026", nav_slips: "Бюллетени", nav_topics: "По темам", nav_compass: "Компас", nav_trust: "Надёжность", nav_behave: "Слова и дела", nav_corr: "Коррупция и бюджет", nav_sources: "Источники",
-    date: "Выборы в Кнессет 26-го созыва, вторник, 27 октября 2026",
+    date: "Выборы в Кнессет 26-го созыва, 27 октября 2026. Окончательный подсчёт Центральной избирательной комиссии, 30.10.2026, до утверждения; передаётся президенту 4.11.",
     h1a: "Тринадцать бюллетеней.", h1b: "Что написано за ними.",
-    lede: "Обзор одиннадцати ведущих списков и двух, балансирующих у электорального барьера: что каждый говорит о безопасности, экономике, внешней политике, палестинском и арабском вопросе и образовании. Чем он отличается. Где он стоит на оси безопасности, на экономической оси и на оси религии и государства. Насколько можно доверять его обещаниям, судя по прошлым делам и по людям в списке. И что задокументировано о коррупции, бюджетных деньгах и долгах, с критическими замечаниями, которые стоит взвесить, прежде чем делать вывод.",
-    threshold_lbl: "Электоральный барьер", majority_lbl: "Большинство для коалиции", polls_lbl: "Среднее четырёх последних опросов: сионистская оппозиция", polls_mid: "блок Нетаньяху", polls_arab: "арабские списки",
+    lede: "Обзор одиннадцати списков, прошедших в Кнессет 26-го созыва, и двух, не преодолевших барьер: что каждый говорит о безопасности, экономике, внешней политике, палестинском и арабском вопросе и образовании. Чем он отличается. Где он стоит на оси безопасности, на экономической оси и на оси религии и государства. Насколько можно доверять его обещаниям, судя по прошлым делам и по людям в списке. И что задокументировано о коррупции, бюджетных деньгах и долгах, с критическими замечаниями, которые стоит взвесить, прежде чем делать вывод.",
+    threshold_lbl: "Электоральный барьер", majority_lbl: "Большинство для коалиции", polls_lbl: "Результаты: сионистская оппозиция", polls_mid: "блок Нетаньяху", polls_arab: "арабские списки",
     ch1_h: "Тринадцать бюллетеней, три блока", ch1_p: "На каждом бюллетене буквы, утверждённые Центральной избирательной комиссией. Нажмите на бюллетень, чтобы открыть полный обзор; наведите курсор, чтобы увидеть оценки на обороте. Три блока: сионисты, харедим и арабы. Внутри сионистского блока бюллетень тем темнее, чем правее партия на оси безопасности. Фильтр действует на всю страницу.",
     ch2_h: "Один вопрос, тринадцать ответов", ch2_p: "Выберите тему, чтобы увидеть позиции всех партий рядом. Сжато по программам, заявлениям и ответам партий на анкеты СМИ.",
     ch3_h: "Ось безопасности, экономическая ось, ось религии и государства", ch3_p: "Три оси, две показаны одновременно; выберите пару выше. Безопасность: от урегулирования и отступления до решения силой и суверенитета. Экономика: от социального государства до свободного рынка. Религия и государство: от разделения религии и государства, гражданских браков и транспорта в субботу на либеральной стороне (-10) до галахического статус-кво, освобождения изучающих Тору и брака только через Раввинат на консервативной стороне (+10). Значения — редакционная оценка по шкале от -10 до +10 на основе собственных программ, заявлений и голосований каждой партии. Для оси религии и государства использованы голосования Кнессета о транспорте в субботу (19.11.2025) и гражданских браках (7.6.2023), Основной закон об изучении Торы (13.7.2026), программы и опросники ynet и N12. Участие в коалиции не сдвигает партию по оси: сидеть с правыми не значит верить во всё, что они делают. Партия без заявленной доктрины безопасности показана пустым кругом. Блоков три: сионисты, харедим и арабы, потому что правые, центр и левые определяются здесь самим компасом, а не названием, которое партия выбрала себе. Наведите или нажмите на точку, чтобы увидеть обоснование.",
@@ -1321,11 +1331,11 @@ ru: {
     bh_h: "Что партия говорит о себе и что делает", bh_p: "Каждая партия определяет себя: правая, левая, либеральная, социальная, государственническая. Здесь самоопределение проверяется по фактам: датированные голосования в Кнессете, решения правительства, ответы на экономические анкеты и датированные заявления лидеров. По каждой оси: что сказано, что сделано, и совпадает ли это, частично или противоречит. Партия без голосований помечена «нет данных». Это же основа для корректировок компаса: Ликуд и Религиозный сионизм опустились по экономической оси, потому что их поведение у власти не соответствовало декларации свободного рынка.",
     corr_h: "Коррупция, бюджетные деньги и долги", corr_p: "Два дополнительных индекса по шкале от 0 до 5, где высокий балл означает большую подверженность. Коррупция учитывает обвинительные заключения, приговоры и выводы Госконтролёра в отношении избранных лиц и лидеров списка, в том числе в прошлом. Бюджетные деньги и долги измеряют коалиционные фонды, которые список требовал и получал, министерства, созданные под него, долги партии государству и выводы Госконтролёра о её финансировании. К каждому списку приложены критические замечания: почему цифра может вводить в заблуждение и что спросить, прежде чем делать вывод. Старые правящие партии будут выглядеть здесь хуже новых или оппозиционных, не обязательно потому, что они коррумпированнее, а потому, что у них было больше возможностей.",
     src_h: "Источники и примечания",
-    all: "Все", click_open: "Нажмите, чтобы открыть; наведите, чтобы перевернуть", seats_polls: "мандатов в опросах", near_threshold: "у барьера,",
+    all: "Все", click_open: "Нажмите, чтобы открыть; наведите, чтобы перевернуть", seats_polls: "мандатов в опросах", near_threshold: "у барьера,", seats_won: "мандатов", polls_were: "в опросах {n}", not_passed: "не прошла барьер,", turnout_lbl: "Явка", valid_lbl: "Действительных голосов", thr_votes_lbl: "барьер в голосах",
     cred_lbl: "Надёжность (обещания и дела)", prof_lbl: "Профессионализм", prof_formula: "оценка {b}, охват {c}", corr_lbl: "Коррупция", waste_lbl: "Бюджет и долги", sec_lbl: "Ось безопасности", eco_lbl: "Экономическая ось", more: "Полный обзор",
     chart_party: "Партия (по сумме оценок)", chart_cred: "Надёжность: обещания и дела", chart_prof: "Профессионализм: среднее редакционной оценки и взвешенного охвата", chart_note: "Бледная оценка надёжности означает низкую уверенность: короткая история. Нажмите на строку для подробностей.",
     corr_party: "Список (от наибольшей подверженности)", corr_c: "Коррупция: обвинения, приговоры, выводы Госконтролёра", corr_w: "Бюджет и долги: коалиционные фонды, министерства, долги государству", corr_note: "Здесь высокий балл означает большую подверженность, в отличие от главы о надёжности. Нажмите на строку для подробностей и критических замечаний.",
-    legend_size: "Размер круга по среднему числу мандатов в опросах", legend_hollow: "Пустой круг: нет заявленной доктрины безопасности; позиция по собственным заявлениям и голосованиям партии", legend_dashed: "Пунктир: у электорального барьера",
+    legend_size: "Размер круга по числу полученных мандатов", legend_hollow: "Пустой круг: нет заявленной доктрины безопасности; позиция по собственным заявлениям и голосованиям партии", legend_dashed: "Пунктир: не прошла барьер",
     ax_right: "Правые по безопасности: силовое решение, суверенитет", ax_left: "Левые по безопасности: урегулирование, размежевание", ax_top: "Вверху: свободный рынок, конкуренция", ax_bottom: "Внизу: социальное государство, вмешательство",
     tbl_party: "Партия", tbl_sec: "Безопасность, слева направо", tbl_eco: "Экономика, от социального к рынку",
     rel_lbl: "Ось религии и государства", rel_hint: "-10 либерально, +10 консервативно", tbl_rel: "Религия и государство, от либерального к консервативному", ax_rel_hi: "Консервативно: галахический статус-кво, освобождение изучающих Тору", ax_rel_lo: "Либерально: разделение религии и государства, гражданские браки", ax_eco_hi: "Свободный рынок, конкуренция", ax_eco_lo: "Социальное государство, вмешательство", view_lbl: "Выбор осей", view_se: "Безопасность × экономика", view_sr: "Безопасность × религия и государство", view_er: "Экономика × религия и государство", sec_hint: "-10 урегулирование, +10 решение силой", eco_hint: "-10 социальное, +10 рынок",
@@ -1530,7 +1540,7 @@ ru: {
 
 let LANG = "he";
 try { const saved = localStorage.getItem("mapat-lang"); if (saved && (saved === "en" || saved === "ru")) LANG = saved; } catch (_) {}
-const HE_UI = {"rel_lbl": "ציר דת ומדינה", "rel_hint": "10- ליברלי, 10+ שמרני", "tbl_rel": "דת ומדינה, מליברלי לשמרני", "ax_rel_hi": "שמרני: סטטוס קוו הלכתי, פטור ללומדי תורה", "ax_rel_lo": "ליברלי: הפרדת דת ומדינה, נישואין אזרחיים", "ax_eco_hi": "שוק חופשי, תחרות", "ax_eco_lo": "מדינת רווחה, התערבות", "view_lbl": "בחירת צירים", "view_se": "ביטחון × כלכלה", "view_sr": "ביטחון × דת ומדינה", "view_er": "כלכלה × דת ומדינה", "all": "הכל", "click_open": "לחצו לפתיחה, רחפו להפיכה", "seats_polls": "מנדטים בסקרים", "near_threshold": "סביב אחוז החסימה,", "cred_lbl": "אמינות (הבטחות מול מעשים)", "prof_lbl": "מקצועיות", "prof_formula": "הערכה {b}, כיסוי {c}", "corr_lbl": "שחיתות", "waste_lbl": "כספי ציבור וחובות", "sec_lbl": "ציר ביטחוני", "eco_lbl": "ציר כלכלי", "more": "לסקירה המלאה", "chart_party": "רשימה (ממוינות לפי סכום הציונים)", "chart_cred": "אמינות: הבטחות מול מעשים", "chart_prof": "מקצועיות: ממוצע של הערכה עריכתית וכיסוי מקצועי משוקלל", "chart_note": "ציון אמינות דהוי = ביטחון נמוך: בסיס נתונים קצר. לחיצה על שורה פותחת את הפירוט למטה.", "corr_party": "רשימה (ממוינות מהחשיפה הגבוהה לנמוכה)", "corr_c": "שחיתות: כתבי אישום, הרשעות, ממצאי מבקר", "corr_w": "כספי ציבור וחובות: כספים קואליציוניים, משרדים, חובות למדינה", "corr_note": "כאן ציון גבוה פירושו חשיפה גבוהה יותר, להבדיל מפרק האמינות. לחיצה על שורה פותחת את הפירוט ואת נקודות הביקורת.", "legend_size": "גודל העיגול לפי ממוצע המנדטים בסקרים", "legend_hollow": "עיגול חלול: אין תפיסה ביטחונית מוצהרת; המיקום לפי הצהרות והצבעות המפלגה עצמה", "legend_dashed": "מקווקו: סביב אחוז החסימה", "ax_right": "ימין ביטחוני: הכרעה, ריבונות", "ax_left": "שמאל ביטחוני: הסדר, היפרדות", "ax_top": "למעלה: שוק חופשי, תחרות", "ax_bottom": "למטה: מדינת רווחה, התערבות", "basis_lbl": "הבטחות מול מעשים", "people_lbl": "האנשים והניסיון", "unique_lbl": "מה מיוחד למפלגה", "hist_lbl": "היסטוריה בקצרה", "lineage": "שושלת.", "people": "האנשים הדומיננטיים.", "wins": "הישגים.", "fails": "כישלונות.", "corr_sec": "שחיתות וכספי ציבור", "trust_sec": "אמינות ומקצועיות", "details_link": "לפירוט ההבטחות, המעשים והאנשים", "crit_link": "לפירוט ולנקודות הביקורת", "he_only": "", "tip_default": "בחרו מפלגה בתרשים.", "conf_high": "ביטחון גבוה", "conf_mid": "ביטחון בינוני", "conf_low": "ביטחון נמוך", "v_rel": "אמינה", "v_mostly": "אמינה ברובה", "v_partial": "אמינות חלקית", "v_low": "אמינות נמוכה", "short_basis": "(בסיס קצר)", "match": "תואם", "partial": "חלקי", "clash": "סותר", "na": "אין רקורד", "said": "נאמר.", "done": "נעשה.", "source": "מקור:", "bh_h": "מה המפלגה אומרת שהיא, ומה היא עושה", "corr_facts": "שחיתות: מה מתועד", "waste_facts": "כספי ציבור וחובות: מה מתועד", "crit_pts": "נקודות ביקורת לפני שמגבשים דעה", "kept": "קוים", "broken": "הופר", "partial_m": "חלקי או לא ניתן למדידה", "sec_hint": "10- הסדר, 10+ הכרעה", "eco_hint": "10- רווחה, 10+ שוק", "people_count": "{n} אנשים נבחנו", "chev_trust": "לפירוט ההבטחות, המעשים והאנשים", "chev_corr": "לפירוט ולנקודות הביקורת", "lang_note": ""};
+const HE_UI = {"seats_won": "מנדטים", "polls_were": "בסקרים {n}", "not_passed": "לא עברה את אחוז החסימה,", "turnout_lbl": "אחוז הצבעה", "valid_lbl": "קולות כשרים", "thr_votes_lbl": "אחוז החסימה בקולות", "rel_lbl": "ציר דת ומדינה", "rel_hint": "10- ליברלי, 10+ שמרני", "tbl_rel": "דת ומדינה, מליברלי לשמרני", "ax_rel_hi": "שמרני: סטטוס קוו הלכתי, פטור ללומדי תורה", "ax_rel_lo": "ליברלי: הפרדת דת ומדינה, נישואין אזרחיים", "ax_eco_hi": "שוק חופשי, תחרות", "ax_eco_lo": "מדינת רווחה, התערבות", "view_lbl": "בחירת צירים", "view_se": "ביטחון × כלכלה", "view_sr": "ביטחון × דת ומדינה", "view_er": "כלכלה × דת ומדינה", "all": "הכל", "click_open": "לחצו לפתיחה, רחפו להפיכה", "seats_polls": "מנדטים בסקרים", "near_threshold": "סביב אחוז החסימה,", "cred_lbl": "אמינות (הבטחות מול מעשים)", "prof_lbl": "מקצועיות", "prof_formula": "הערכה {b}, כיסוי {c}", "corr_lbl": "שחיתות", "waste_lbl": "כספי ציבור וחובות", "sec_lbl": "ציר ביטחוני", "eco_lbl": "ציר כלכלי", "more": "לסקירה המלאה", "chart_party": "רשימה (ממוינות לפי סכום הציונים)", "chart_cred": "אמינות: הבטחות מול מעשים", "chart_prof": "מקצועיות: ממוצע של הערכה עריכתית וכיסוי מקצועי משוקלל", "chart_note": "ציון אמינות דהוי = ביטחון נמוך: בסיס נתונים קצר. לחיצה על שורה פותחת את הפירוט למטה.", "corr_party": "רשימה (ממוינות מהחשיפה הגבוהה לנמוכה)", "corr_c": "שחיתות: כתבי אישום, הרשעות, ממצאי מבקר", "corr_w": "כספי ציבור וחובות: כספים קואליציוניים, משרדים, חובות למדינה", "corr_note": "כאן ציון גבוה פירושו חשיפה גבוהה יותר, להבדיל מפרק האמינות. לחיצה על שורה פותחת את הפירוט ואת נקודות הביקורת.", "legend_size": "גודל העיגול לפי מספר המנדטים שהתקבלו", "legend_hollow": "עיגול חלול: אין תפיסה ביטחונית מוצהרת; המיקום לפי הצהרות והצבעות המפלגה עצמה", "legend_dashed": "מקווקו: לא עברה את אחוז החסימה", "ax_right": "ימין ביטחוני: הכרעה, ריבונות", "ax_left": "שמאל ביטחוני: הסדר, היפרדות", "ax_top": "למעלה: שוק חופשי, תחרות", "ax_bottom": "למטה: מדינת רווחה, התערבות", "basis_lbl": "הבטחות מול מעשים", "people_lbl": "האנשים והניסיון", "unique_lbl": "מה מיוחד למפלגה", "hist_lbl": "היסטוריה בקצרה", "lineage": "שושלת.", "people": "האנשים הדומיננטיים.", "wins": "הישגים.", "fails": "כישלונות.", "corr_sec": "שחיתות וכספי ציבור", "trust_sec": "אמינות ומקצועיות", "details_link": "לפירוט ההבטחות, המעשים והאנשים", "crit_link": "לפירוט ולנקודות הביקורת", "he_only": "", "tip_default": "בחרו מפלגה בתרשים.", "conf_high": "ביטחון גבוה", "conf_mid": "ביטחון בינוני", "conf_low": "ביטחון נמוך", "v_rel": "אמינה", "v_mostly": "אמינה ברובה", "v_partial": "אמינות חלקית", "v_low": "אמינות נמוכה", "short_basis": "(בסיס קצר)", "match": "תואם", "partial": "חלקי", "clash": "סותר", "na": "אין רקורד", "said": "נאמר.", "done": "נעשה.", "source": "מקור:", "bh_h": "מה המפלגה אומרת שהיא, ומה היא עושה", "corr_facts": "שחיתות: מה מתועד", "waste_facts": "כספי ציבור וחובות: מה מתועד", "crit_pts": "נקודות ביקורת לפני שמגבשים דעה", "kept": "קוים", "broken": "הופר", "partial_m": "חלקי או לא ניתן למדידה", "sec_hint": "10- הסדר, 10+ הכרעה", "eco_hint": "10- רווחה, 10+ שוק", "people_count": "{n} אנשים נבחנו", "chev_trust": "לפירוט ההבטחות, המעשים והאנשים", "chev_corr": "לפירוט ולנקודות הביקורת", "lang_note": ""};
 const U = (k, vars) => { let v = (LANG !== "he" && TR[LANG] && TR[LANG].ui[k]) || HE_UI[k] || ""; if (vars) for (const [a, b] of Object.entries(vars)) v = v.replace("{" + a + "}", b); return v; };
 const L = (p, k) => (LANG !== "he" && TR[LANG] && TR[LANG].parties[p.id] && TR[LANG].parties[p.id][k]) || p[k];
 const LT = (p, topic) => (LANG !== "he" && TR[LANG] && TR[LANG].parties[p.id] && TR[LANG].parties[p.id].t && TR[LANG].parties[p.id].t[topic]) || p.t[topic];
@@ -1547,7 +1557,7 @@ function verdictOf(s) { return s >= 4.5 ? [U("v_rel") || "אמינה", "v-ok"] :
 
 const PARTIES = [
 {
-  id: "likud", letters: "מחל", name: "הליכוד", leader: "בנימין נתניהו", bloc: "zion", seats: "19.75", sec: 7, eco: 4, rel: 4,
+  id: "likud", letters: "מחל", name: "הליכוד", leader: "בנימין נתניהו", bloc: "zion", seats: "19.75", result: 27, sec: 7, eco: 4, rel: 4,
   one: "המשך הלחימה עד הכרעה, שוק חופשי, לא למדינה פלסטינית, רפורמה משפטית.",
   why: "ביטחוני 7+: הכרעה צבאית בכל הגזרות ושלילת מדינה פלסטינית, אך בלי סיפוח מוצהר. כלכלי 4+ (ירד מ-6 לפי ההתנהגות): ההצהרה היא שוק חופשי, אבל בפועל העלאת מע\"מ, כ-20 מיליארד כספים קואליציוניים, התנגדות לפתיחת יבוא מזון ופיקוח מחירים חלקי.",
   rwhy: "דת ומדינה 4+: מגדיר עצמו ליברלי, אך בהצבעות שומר סטטוס קוו ומצביע עם החרדים.",
@@ -1590,7 +1600,7 @@ const PARTIES = [
   },
 },
 {
-  id: "rz", letters: "ט", name: "הציונות הדתית–זהות", leader: "בצלאל סמוטריץ' ומשה פייגלין", bloc: "zion", seats: "7", sec: 9, eco: 5, rel: 8,
+  id: "rz", letters: "ט", name: "הציונות הדתית–זהות", leader: "בצלאל סמוטריץ' ומשה פייגלין", bloc: "zion", seats: "7", result: 6, sec: 9, eco: 5, rel: 8,
   one: "ריבונות מלאה ביו\"ש, פירוק הרש\"פ, פסקת התגברות, מס שטוח.",
   why: "ביטחוני 9+: סיפוח, פירוק הרשות הפלסטינית והסדרת כל המאחזים. כלכלי 5+ (ירד מ-7 לפי ההתנהגות): הצהרות שוק חופשי ומס שטוח, אך כשר אוצר העלה מע\"מ, הרחיב כספים קואליציוניים והשקעה סקטוריאלית בהתיישבות ובישיבות.",
   rwhy: "דת ומדינה 8+: שמרני בכל ההצבעות; שונה מהחרדים רק בהר הבית ובשירות הצבאי של בניו.",
@@ -1628,7 +1638,7 @@ const PARTIES = [
   },
 },
 {
-  id: "otzma", letters: "ב", name: "עוצמה יהודית", leader: "איתמר בן גביר", bloc: "zion", seats: "7.75", sec: 9.5, eco: -1, rel: 7,
+  id: "otzma", letters: "ב", name: "עוצמה יהודית", leader: "איתמר בן גביר", bloc: "zion", seats: "7.75", result: 7, sec: 9.5, eco: -1, rel: 7,
   one: "עונש מוות למחבלים, עידוד הגירה מעזה ויו\"ש, ריבונות מלאה, ביטחון פנים.",
   why: "ביטחוני 9.5+: הקצה הניצי, עידוד הגירה, עונש מוות וריבונות מלאה. כלכלי 1-: אין תוכנית מקרו; לגלובס השיבה שהיא בעד פיקוח מחירים, התנגדה לרפורמת החלב ולפתיחת יבוא, ודרשה הנחות קרקע. פופוליזם סקטוריאלי.",
   rwhy: "דת ומדינה 7+: מצביע כמו החרדים בשבת ובנישואין, אבל לאומי-דתי ולא הלכתי: הר הבית מעל הסטטוס קוו.",
@@ -1665,7 +1675,7 @@ const PARTIES = [
   },
 },
 {
-  id: "shas", letters: "שס", name: "ש\"ס", leader: "אריה דרעי", bloc: "haredi", seats: "7.5", sec: 4, eco: -5, rel: 9, doctrine: false,
+  id: "shas", letters: "שס", name: "ש\"ס", leader: "אריה דרעי", bloc: "haredi", seats: "7.5", result: 6, sec: 4, eco: -5, rel: 9, doctrine: false,
   one: "חוק יסוד: לימוד תורה, רשות למאבק בעוני, שיוך לגוש הימין, חוק דרעי.",
   why: "ביטחוני 4+ (עיגול חלול: אין תפיסה ביטחונית מוצהרת). המיקום לפי הצהרות והצבעות של המפלגה עצמה בלבד: שלילת מדינה פלסטינית, תמיכה בהצהרת הריבונות, \"צה\"ל יישאר בלבנון\". לא לפי שותפיה. ההתנגדות לגיוס אינה נמדדת בציר הזה. כלכלי 5-: רווחה והעברות (כרטיסי מזון, רשות למאבק בעוני, תקצוב סקטוריאלי).",
   rwhy: "דת ומדינה 9+: שמרני הלכתי עקבי, מעט פרגמטי יותר מיהדות התורה בניסוח ובמשא ומתן.",
@@ -1704,7 +1714,7 @@ const PARTIES = [
   },
 },
 {
-  id: "utj", letters: "ג", name: "יהדות התורה", leader: "יעקב אשר", bloc: "haredi", seats: "7.5", sec: 1, eco: -4, rel: 10, doctrine: false,
+  id: "utj", letters: "ג", name: "יהדות התורה", leader: "יעקב אשר", bloc: "haredi", seats: "7.5", result: 7, sec: 1, eco: -4, rel: 10, doctrine: false,
   one: "חוק פטור מגיוס כתנאי לכל ממשלה, חטופים \"בכל מחיר\", חינוך עצמאי.",
   why: "ביטחוני 1+ (עיגול חלול: אין תפיסה ביטחונית מוצהרת). מפלגה לא-ציונית שאינה מתיימרת לעמדה טריטוריאלית; תמיכה בעסקות חטופים \"בכל מחיר\" ונכונות לשבת גם עם איזנקוט. הישיבה בקואליציות ימין היא עסקה סקטוריאלית, לא אמונה, ולכן אינה מזיזה את המיקום. כלכלי 4-: תקצוב סקטוריאלי, סבסוד מעונות וישיבות.",
   rwhy: "דת ומדינה 10+: הקצה השמרני של המפה. כל עמדה נגזרת מהרבנים ומההלכה; אין פשרה מוצהרת.",
@@ -1741,7 +1751,7 @@ const PARTIES = [
   },
 },
 {
-  id: "yashar", letters: "דרך", name: "ישר!", leader: "גדי איזנקוט", bloc: "zion", seats: "22", sec: 4, eco: 4, rel: -2,
+  id: "yashar", letters: "דרך", name: "ישר!", leader: "גדי איזנקוט", bloc: "zion", seats: "22", result: 21, sec: 4, eco: 4, rel: -2,
   one: "ועדת חקירה ממלכתית, שירות ממלכתי לכל, חוקה, לא למדינה פלסטינית.",
   why: "ביטחוני 4+: ניצי בעזה ובאיראן ושולל מדינה פלסטינית, אך ללא סיפוח, עם מאחזים לפי דין ופתיחות להסדרים אזוריים. כלכלי 4+: יבוא מקביל, הורדת מס הכנסה ופירוק ריכוזיות, לצד הטבות ממשלתיות ממוקדות למשרתים.",
   rwhy: "דת ומדינה 2-: ליברלי מתון. אוטונומיה מקומית ושירות לכל, אבל נמנע מהתחייבות על נישואין אזרחיים.",
@@ -1780,7 +1790,7 @@ const PARTIES = [
   },
 },
 {
-  id: "beyachad", letters: "רק", name: "ביחד", leader: "נפתלי בנט ויאיר לפיד", bloc: "zion", seats: "14.5", sec: 5.5, eco: 5, rel: -5,
+  id: "beyachad", letters: "רק", name: "ביחד", leader: "נפתלי בנט ויאיר לפיד", bloc: "zion", seats: "14.5", result: 12, sec: 5.5, eco: 5, rel: -5,
   one: "חוק המשרתים, איראן כיעד, מזון זול ב-30%, ליבה 60/20/20.",
   why: "ביטחוני 5.5+: \"תפיסת ביטחון אקטיבית\" (מטרות המפלגה אצל רשם המפלגות), איראן כיעד (\"אם חיזבאללה יורה עלינו, אנחנו יורים על איראן\", ישראל היום 19.8.2026), התנגדות למדינה פלסטינית ולמסירת שטחים, ושטחי C כחלק ריבוני עתידי לפי תוכנית בנט מ-2012 (תשובת המפלגה לשאלון ynet על יהודה ושומרון), אך פינוי בנייה לא חוקית על אדמה פרטית. כלכלי 5+: פירוק קרטלים והפחתת רגולציה לצד תוכנית הטבות למשרתים בעלות 8.8 מיליארד.",
   rwhy: "דת ומדינה 5-: ליברלי בהצבעות ובמצע יש עתיד; חצי בנט מרכך את הקו ל\"ערים יבחרו\".",
@@ -1820,7 +1830,7 @@ const PARTIES = [
   },
 },
 {
-  id: "yb", letters: "ל", name: "ישראל ביתנו", leader: "אביגדור ליברמן", bloc: "zion", seats: "8", sec: 7, eco: 7, rel: -8,
+  id: "yb", letters: "ל", name: "ישראל ביתנו", leader: "אביגדור ליברמן", bloc: "zion", seats: "8", result: 7, sec: 7, eco: 7, rel: -8,
   one: "ממשלה ציונית בלבד, גיוס לכל בני 18, הפרדת דת ממדינה, ריבונות בשטחי C.",
   why: "ביטחוני 7+: אפס הכלה ומכה מקדימה, ביטול אוסלו ופירוק הרש\"פ, ריבונות ב-C. כלכלי 7+: הקו הליברלי המובהק ביותר: צמצום ממשלה, פירוק מונופולים, ביטול מועצות ייצור והתניית סבסוד בעבודה.",
   rwhy: "דת ומדינה 8-: המפלגה היחידה שכותבת \"הפרדה בין דת למדינה\" במפורש, ומצביעה בהתאם.",
@@ -1857,7 +1867,7 @@ const PARTIES = [
   },
 },
 {
-  id: "dem", letters: "אמת", name: "הדמוקרטים", leader: "יאיר גולן", bloc: "zion", seats: "9.5", sec: -4, eco: -5, rel: -9,
+  id: "dem", letters: "אמת", name: "הדמוקרטים", leader: "יאיר גולן", bloc: "zion", seats: "9.5", result: 8, sec: -4, eco: -5, rel: -9,
   one: "יוזמה אזורית להיפרדות, חוקה ממגילת העצמאות, רווחה, שוויון בנטל.",
   why: "ביטחוני 4-: היפרדות במהלך אזורי ועצירת הסיפוח, אך ללא התחייבות מפורשת למדינה פלסטינית ועם \"יד קשה\" בטרור. כלכלי 5-: סוציאל-דמוקרטיה: העברת תקציבים סקטוריאליים לרווחה ושירות ציבורי.",
   rwhy: "דת ומדינה 9-: הקצה הליברלי במצע; הפתח לחרדים בקואליציה הוא הסייג היחיד.",
@@ -1896,7 +1906,7 @@ const PARTIES = [
   },
 },
 {
-  id: "raam", letters: "עם", name: "רע\"מ", leader: "מנסור עבאס", bloc: "arab", seats: "5.5", sec: -6, eco: -2, rel: 5,
+  id: "raam", letters: "עם", name: "רע\"מ", leader: "מנסור עבאס", bloc: "arab", seats: "5.5", result: 8, sec: -6, eco: -2, rel: 5,
   one: "שותפות בקואליציה, מאבק בפשיעה, שתי מדינות, תוכנית החומש לחברה הערבית.",
   why: "ביטחוני 6-: הכרה במדינת פלסטין ושלילת ריבונות, אך הכרה באופי היהודי של המדינה ונכונות לקואליציה ציונית. כלכלי 2-: השקעה ממשלתית בחברה הערבית, בלי אג'נדה סוציאליסטית רחבה; שמרנות חברתית.",
   rwhy: "דת ומדינה 5+: שמרני דתי בחברה ובהצבעות, בעל ברית טבעי של החרדים בדת ומדינה, אך לא בשאלת האופי היהודי של המדינה.",
@@ -1933,7 +1943,7 @@ const PARTIES = [
   },
 },
 {
-  id: "joint", letters: "ודם", name: "הרשימה המשותפת", leader: "יוסף ג'בארין ואחמד טיבי (חד\"ש, תע\"ל, בל\"ד)", bloc: "arab", seats: "9", sec: -9, eco: -9, rel: -6,
+  id: "joint", letters: "ודם", name: "הרשימה המשותפת", leader: "יוסף ג'בארין ואחמד טיבי (חד\"ש, תע\"ל, בל\"ד)", bloc: "arab", seats: "9", result: 11, sec: -9, eco: -9, rel: -6,
   one: "סיום הכיבוש, מדינה פלסטינית בגבולות 67, הכפלת שכר המינימום, חינוך חינם.",
   why: "ביטחוני 9-: סיום הפעילות הצבאית, פינוי כל ההתנחלויות וזכות סירוב מצפוני. כלכלי 9-: סוציאליזם מוצהר: הלאמה, כמעט הכפלת שכר המינימום, קצבת זקנה בגובה שכר מינימום.",
   rwhy: "דת ומדינה 6-: חילוני-ליברלי בהצהרה, אבל ההצבעות סדוקות: בל\"ד ומצביעים מסורתיים מושכים למרכז.",
@@ -1986,7 +1996,7 @@ function segs(v, low) {
 function meter(v, low, label, dataL) { return `<span class="meter" data-l="${esc(dataL || label || "")}">${label ? `<span class="l">${esc(label)}</span>` : ""}${segs(v, low)}<span class="v num">${v}</span></span>`; }
 
 PARTIES.push(...NEW_PARTIES);
-for (const p of PARTIES) { Object.assign(p, EXTRA[p.id] || {}); p.cover = COVER[p.id] || {}; p.seatsNum = p.threshold ? 3 : parseFloat(p.seats); if (p.doctrine === undefined) p.doctrine = true; }
+for (const p of PARTIES) { Object.assign(p, EXTRA[p.id] || {}); p.cover = COVER[p.id] || {}; p.seatsNum = p.result || 1.5; if (p.doctrine === undefined) p.doctrine = true; }
 const FOCUS = { likud:["security","economy","diplomacy"], rz:["arab","law","security"], otzma:["security","law"], shas:["economy","education"], utj:["education","economy"], yashar:["security","law","education","economy"], beyachad:["security","economy","education"], yb:["security","economy","law"], dem:["law","economy","diplomacy"], raam:["arab","economy"], joint:["arab","law"], miluim:["economy","security","law"], amcha:["security","arab"] };
 for (const p of PARTIES) {
   const f = FOCUS[p.id] || []; let num = 0, den = 0;
@@ -2000,13 +2010,26 @@ const corrLabel = (v) => v >= 4 ? "v-bad" : v >= 2 ? "v-mid" : "v-ok";
 function strip() {
   const box = $("#blocStrip");
   for (const [k, b] of Object.entries(BLOCS)) {
-    const ps = PARTIES.filter((p) => p.bloc === k && !p.threshold);
-    const n = ps.reduce((a, p) => a + parseFloat(p.seats), 0);
+    const ps = PARTIES.filter((p) => p.bloc === k && p.result);
+    const n = ps.reduce((a, p) => a + p.result, 0);
     box.innerHTML += `<div role="button" tabindex="0" data-bloc="${k}" style="--c:${b.color};--i:${Object.keys(BLOCS).indexOf(k)}"><span class="n num" data-count="${n}">0</span><span class="l">${esc(BN(k))}</span><span class="l2">${ps.map((x) => L(x, "name")).join(", ")}</span></div>`;
   }
   box.querySelectorAll("[data-bloc]").forEach((d) => { const go = () => { activeBlocs = new Set([d.dataset.bloc]); syncChips(); render(); document.querySelector("#parties").scrollIntoView({ block: "start" }); }; d.addEventListener("click", go); d.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } }); });
 }
 strip();
+function seatBar() {
+  const box = $("#seatBar"); if (!box) return; box.innerHTML = "";
+  const order = { zion: 0, haredi: 1, arab: 2 };
+  const ps = PARTIES.filter((p) => p.result).sort((a, b) => (order[a.bloc] - order[b.bloc]) || (b.sec - a.sec) || (b.result - a.result));
+  ps.forEach((p, i) => {
+    const el = document.createElement("span"); el.style.setProperty("--c", slipTone(p)); el.style.setProperty("--i", i); el.style.flex = String(p.result);
+    el.title = `${L(p, "name")}: ${p.result}`; el.setAttribute("role", "button"); el.tabIndex = 0;
+    el.innerHTML = `<b>${p.result}</b><small>${esc(L(p, "name"))}</small>`;
+    el.addEventListener("click", () => openDetail(p.id)); el.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(p.id); } });
+    box.appendChild(el);
+  });
+}
+seatBar();
 
 // ---------- chips ----------
 (function buildChips() {
@@ -2044,11 +2067,11 @@ function buildCards() {
     c.setAttribute("role", "button"); c.setAttribute("tabindex", "0"); c.setAttribute("aria-label", L(p, "name"));
     c.style.setProperty("--i", PARTIES.indexOf(p));
     if (p.threshold) c.classList.add("threshold");
-    const pct = Math.min(100, Math.round((p.seatsNum / 25) * 100));
+    const pct = Math.min(100, Math.round((p.seatsNum / 30) * 100));
     c.innerHTML = `<div class="face front">${p.logo && IMG[p.logo] ? `<img class="slip-logo" src="${IMG[p.logo]}" alt="">` : ""}<span class="letters">${esc(p.letters)}</span>
       <span class="name">${esc(L(p, "name"))}</span><span class="leader">${esc(L(p, "leader"))}</span>
       <span class="one">${esc(L(p, "one"))}</span>
-      <span class="foot"><span>${esc(BN(p.bloc))}, ${esc(wingOf(p))}</span><span class="num">${p.threshold ? U("near_threshold") + " " + esc(p.seats) : esc(p.seats) + " " + U("seats_polls")}</span></span>
+      <span class="foot"><span>${esc(BN(p.bloc))}, ${esc(wingOf(p))}</span><span class="num">${p.result ? p.result + " " + U("seats_won") + " (" + U("polls_were", { n: p.seats }) + ")" : U("not_passed") + " " + esc(p.pct)}</span></span>
       <span class="pct" style="--w:${pct}%"><i></i></span><span class="hint">${U("click_open")}</span></div>
       <div class="face back"><span class="bname">${esc(L(p, "name"))}</span>
       <span class="lbl">${U("cred_lbl")}</span>${meter(p.trust.cred, p.trust.conf === "low", "")}
@@ -2295,7 +2318,7 @@ function renderBehave() {
 function openDetail(id) {
   const p = PARTIES.find((x) => x.id === id); if (!p) return;
   const dlg = $("#dlg"); dlg.style.setProperty("--c", blocOf(p).color); const [vt] = verdictOf(p.trust.cred);
-  $("#dHead").innerHTML = `${p.logo && IMG[p.logo] ? `<img class="d-logo" src="${IMG[p.logo]}" alt="">` : ""}<span class="d-letters">${esc(p.letters)}</span><span class="name">${esc(L(p, "name"))}</span><span class="muted">${esc(BN(p.bloc))}, ${esc(L(p, "leader"))}, ${esc(p.seats)} ${U("seats_polls")}</span><button class="close" aria-label="סגירה" id="dClose">×</button>`;
+  $("#dHead").innerHTML = `${p.logo && IMG[p.logo] ? `<img class="d-logo" src="${IMG[p.logo]}" alt="">` : ""}<span class="d-letters">${esc(p.letters)}</span><span class="name">${esc(L(p, "name"))}</span><span class="muted">${esc(BN(p.bloc))}, ${esc(L(p, "leader"))}, ${p.result ? p.result + " " + U("seats_won") + ", " + U("polls_were", { n: p.seats }) : U("not_passed") + " " + esc(p.pct)}</span><button class="close" aria-label="סגירה" id="dClose">×</button>`;
   let body = `<div class="d-pos">
       <div><span class="eyebrow">${U("sec_lbl")}</span><div class="v num">${fmt(p.sec)}</div><span class="muted">${U("sec_hint")}</span></div>
       <div><span class="eyebrow">${U("eco_lbl")}</span><div class="v num">${fmt(p.eco)}</div><span class="muted">${U("eco_hint")}</span></div>
@@ -2330,7 +2353,7 @@ function applyLang() {
   document.querySelectorAll(".chip[data-bloc] .bn").forEach((b) => { b.textContent = BN(b.closest(".chip").dataset.bloc); });
   document.querySelectorAll("#tabs .tab").forEach((b) => { b.textContent = TL(b.dataset.topic); });
   document.querySelectorAll("#axisTabs .tab").forEach((b) => { b.textContent = U("view_" + b.dataset.view); });
-  document.querySelector("#blocStrip").innerHTML = ""; strip(); setTimeout(countHero, 50);
+  document.querySelector("#blocStrip").innerHTML = ""; strip(); seatBar(); setTimeout(countHero, 50);
   document.querySelector("#grid").innerHTML = ""; buildCards();
   render(); renderCredits();
 }
